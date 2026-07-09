@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЭнергоЦОД · Платформа консорциума</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="top">
+  <div class="logo">Энерго<span>ЦОД</span></div>
+  <span class="badge">Версия 3.9</span>
+  <div class="rolebox">
+    <span class="muted" id="userBox" style="display:none"></span>
+    <span class="muted" id="roleLbl">Вы вошли как:</span>
+    <select id="roleSel" onchange="setRole(this.value)"></select>
+    <select id="langSel" title="Язык интерфейса" onchange="setLang(this.value)" style="margin-left:10px"></select>
+    <button class="btn sec" id="logoutBtn" onclick="logout()" style="display:none;padding:5px 12px">Выйти</button>
+  </div>
+</div>
+<div class="tabs" id="tabs"></div>
+<div class="wrap" id="content"></div>
+<div class="footer" id="footer">Консорциум «ЭнергоЦОД» · платформа кооперации участников рынка ЦОД и энергоцентров · показатели расчётов не являются офертой</div>
+
+<div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()">
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<!-- Порядок подключения важен: данные → сервисные слои → представления → каркас (app.js вызывает init()).
+     Обычные скрипты вместо ES-модулей: платформа должна открываться напрямую с диска (file://),
+     где ES-модули блокируются политикой браузера. -->
+<script src="src/data.js"></script>
+<script src="src/db.js"></script>
+<script src="src/i18n.js"></script>
+<script src="src/views/dash.js"></script>
+<script src="src/views/assets.js"></script>
+<script src="src/views/calc.js"></script>
+<script src="src/views/deals.js"></script>
+<script src="src/views/milestones.js"></script>
+<script src="src/views/npa.js"></script>
+<script src="src/views/map.js"></script>
+<script src="src/views/members.js"></script>
+<script src="src/views/auth.js"></script>
+<script src="src/views/admin.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>
