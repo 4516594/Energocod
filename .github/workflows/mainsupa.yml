@@ -1,1 +1,6 @@
-yarn add @supabase/supabase-js
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = 'https://npijksagynhnrkfesnek.supabase.co/rest/v1/';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5waWprc2FneW5obnJrZmVzbmVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM1NzA2ODEsImV4cCI6MjA5OTE0NjY4MX0.xRgLpWmzhs_qTSsu0pKUP5ztC9RaUQMtBve9f4PJFHA';
+
+export const supabase = createClient(supabaseUrl, supabaseKey);
