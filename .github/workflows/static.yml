@@ -41,6 +41,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-env:
-  SUPABASE_URL: ${{ secrets.npijksagynhnrkfesnek.supabase.co/rest/v1 }}
-  SUPABASE_ANON_KEY: ${{ secrets.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5waWprc2FneW5obnJrZmVzbmVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM1NzA2ODEsImV4cCI6MjA5OTE0NjY4MX0.xRgLpWmzhs_qTSsu0pKUP5ztC9RaUQMtBve9f4PJFHA }}
